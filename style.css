@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+    --main-margin:10px;
+    --text-align:center;
+}
+.main-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows:0.4fr 1.8fr 1fr;
+    grid-template-areas: "nav nav nav"
+                        "left-aside main right-aside"
+                        "left-footer footer footer";
+    /* grid-gap: 1px; */
+
+}
+nav{
+    grid-area: nav;
+    padding: var(--main-padding);
+    font-family: 'Tangerine', cursive;
+    font-size: x-large;
+    text-align: var(--text-align);
+
+}
+#left-side{
+    grid-area: left-aside;
+    padding: var(--main-padding);
+    border: 1px solid black;
+
+}
+#left-side h1{
+    text-align: center;
+    
+}
+#left-side p{
+    text-align:left;
+}
+main{
+    grid-area: main;
+    padding: var(--main-padding);
+    text-transform: capitalize;
+    border: 1px solid black;
+}
+main h2{
+    text-align: var(--text-align);
+
+}
+main span{
+    text-align: var(--text-align);
+}
+main img{
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    object-fit: fill;
+}
+#right-side{
+    grid-area: right-aside;
+    padding: var(--main-padding);
+    text-transform: capitalize;
+    border: 1px solid black;
+
+}
+#right-side h2{
+    text-align: center;
+}
+#right-side p{
+    text-align: left;
+}
+#left-footer{
+    grid-area: left-footer;
+    padding: var(--main-padding);
+    text-transform: capitalize;
+    border: 1px solid black;
+
+}
+#left-footer h2{
+    text-align: var(--text-align);
+
+}
+footer{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: footer;
+    font-weight: bold;
+
+}
+footer #politics{
+    background: khaki;
+}
+#politics h2{
+ font-weight: bolder;
+ padding-left: 10px;
+}
+footer #technology{
+    background: rgb(140, 212, 240);
+}
+#technology h2{
+ font-weight: bolder;
+ padding-left: 10px;
+}
+footer #locals{
+    background: deepskyblue;
+}
+#locals h2{
+ font-weight: bolder;
+ padding-left: 10px;
+}
+footer #opinion{
+    background: lightseagreen;
+}
+#opinion h2{
+ font-weight: bolder;
+ padding-left: 10px;
+}
+footer #sports{
+    background: purple;        }
+#sports h2{
+ font-weight: bolder;
+ padding-left: 10px;
+}
+/* on smaller devices  */
+
+@media only screen and (max-width: 540px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "nav"
+                             "left-aside"
+                             "main"
+                             "right-aside"
+                             "left-footer"
+                             "footer";
+
+    }
+}
